@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Intuit Developer @ Github</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="js/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+      <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+       
+        <h3 id="titlehead" >Intuit Developer<a id="githublink" href="http://github.com/intuitdeveloper">github.com/intuitdeveloper</a></h3>
+        <!--<nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a target="_blank" href="https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting">SDK</a></li>
+            <li><a target="_blank" href="https://developer.intuit.com/docs/0100_quickbooks_online/0300_references/0000_overview">API Reference</a></li>
+            <li><a target="_blank" href="https://developer.intuit.com/docs">Explore the docs</a></li>           
+            <li><a target="_blank" href="https://developer.intuit.com/help">Help</a></li>
+          </ul>
+        </nav>-->
+      </div>
+      <hr>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h3>Build your app on the QuickBooks platform!</h3>
+        <p class="lead">Not sure where to start? We’ve put together some handy sample apps and libraries you can use to start building.</p>
+        <nav class="menu-navigation">
+          <ul class="menu-navigation-list">
+            <li class="menu-navigation-list-item"><a href="#oauthtitle">OAuth</a></li>
+            <li class="menu-navigation-list-item"><a href="#webhookstitle">Webhooks</a></li>
+            <li class="menu-navigation-list-item"><a href="#crudtitle">CRUD Samples</a></li>
+            <li class="menu-navigation-list-item"><a href="#timetrackingtitle">Time Tracking</a></li>
+            <li class="menu-navigation-list-item"><a href="#othertitle">Other Samples</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr>
+      <div id="oauthtitle" class="section-title"><span class="title">OAuth</span></div> 
+      <div id="oauth" class="columns section in" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
+      <div id="webhookstitle" class="section-title"><span class="title">Webhooks</span></div> 
+      <div id="webhooks" class="columns section in" style="height: auto;"></div>
+      <div class="separator gap"></div>
+    
+      <div id="crudtitle" class="section-title"><span class="title">CRUD Samples</span></div>
+      <div id="crud" class="columns section in" style="height: auto;"></div>
+      <div class="separator gap"></div>
+      
+      <div id="timetrackingtitle" class="section-title"><span class="title">Time Tracking</span></div>
+      <div id="timetracking" class="columns section in" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
+      <div id="othertitle" class="section-title"><span class="title">Other Samples</span></div>
+      <div id="other" class="columns section in" style="height: auto;"></div>
+
+
+</div> <!-- /container -->
+
+  <!-- Site footer -->
+    <footer class="footer">
+      <nav class="footer-navigation">
+        <p class="copyright">&copy; 2016 Intuit, Inc. All rights reserved. Intuit and QuickBooks are registered trademarks of Intuit Inc. </p>
+      </nav>
+    </footer>
+ 
+<script>
+(function() {
+  var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.github.com/orgs/intuitdeveloper/repos?type=all&per_page=1000",
+      "method": "GET",
+      "headers": {
+        "authorization": "Basic ZGlhbmEtZGVyb3NlOjQ3ZGFhN2U2ODRiZjkyYjNmZTgxYTE1NjU4MDA1ODY5YjhmNDhkYmU="
+      }
+    }
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      var items = [];
+      var $sectiontitle = $("<div>").addClass("section-title");
+      var $span = $( "<span>" ).text( "CRUD").appendTo($sectiontitle);
+      var $div1 = $("<div>").addClass("card pin col-sm-5 col-md-4 col-lg-3 ");
+      
+      $.each( response, function( key, val ) {
+          if (!val.private) {
+            console.log(val.html_url);
+            console.log(val.description);
+            var name = (val.name != null) ? val.name : "";
+            var $item = $("<div>").addClass("card pin col-sm-5 col-md-4 col-lg-3 ");
+            var $link = $( "<a>" ).attr( "href", val.html_url ).appendTo($item);
+            $link.append($("<h5>").text((val.name != null) ? val.name : ""));
+            $item.append($("<p>").text((val.description != null) ? val.description : ""));
+            
+            if (name.indexOf("OAuth") >= 0 || name.indexOf("oauth") >= 0 || name.indexOf("Oauth") >= 0) {              
+              $item.appendTo( "#oauth" );
+            } else if (name.indexOf("Webhooks") >= 0) {            
+              $item.appendTo( "#webhooks" );
+            } else if (name.indexOf("CRUD") >= 0) {
+              $item.appendTo( "#crud" );
+            } else if (name.indexOf("TimeTracking") >= 0) {         
+              $item.appendTo( "#timetracking" );
+            } else {
+              $item.appendTo( "#other" );
+            }
+           
+          }
+      });
+    });
+   
+})();
+</script>
+ 
+</body>
+</html>
