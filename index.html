@@ -16,7 +16,7 @@
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="js/justified-nav.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -114,8 +114,6 @@
       
       $.each( response, function( key, val ) {
           if (!val.private) {
-            console.log(val.html_url);
-            console.log(val.description);
             var name = (val.name != null) ? val.name : "";
             var $item = $("<div>").addClass("card pin col-sm-5 col-md-4 col-lg-3 ");
             var $link = $( "<a>" ).attr( "href", val.html_url ).appendTo($item);
