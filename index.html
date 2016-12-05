@@ -11,6 +11,7 @@
     <title>Intuit Developer @ Github</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -38,15 +39,7 @@
       <div class="masthead">
        
         <h3 id="titlehead" >Intuit Developer<a id="githublink" href="http://github.com/intuitdeveloper">github.com/intuitdeveloper</a></h3>
-        <!--<nav>
-          <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a target="_blank" href="https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting">SDK</a></li>
-            <li><a target="_blank" href="https://developer.intuit.com/docs/0100_quickbooks_online/0300_references/0000_overview">API Reference</a></li>
-            <li><a target="_blank" href="https://developer.intuit.com/docs">Explore the docs</a></li>           
-            <li><a target="_blank" href="https://developer.intuit.com/help">Help</a></li>
-          </ul>
-        </nav>-->
+
       </div>
       <hr>
 
@@ -65,6 +58,15 @@
         </nav>
       </div>
       <hr>
+      
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+             <div id="wrapper">
+              <label for="search" class="col-lg-4 control-label search" style=""><span>Search</span> <input type="search" id="search" class="search-query span3 filter input-medium" placeholder="Our Samples"></label>
+            </div>
+          </div>
+        </div>
+
       <div id="oauthtitle" class="section-title"><span class="title">OAuth</span></div> 
       <div id="oauth" class="columns section in" style="height: auto;"></div>
       <div class="separator gap"></div>
@@ -85,7 +87,7 @@
       <div id="other" class="columns section in" style="height: auto;"></div>
 
 
-</div> <!-- /container -->
+  </div> <!-- /container -->
 
   <!-- Site footer -->
     <footer class="footer">
@@ -114,9 +116,9 @@
       $.each( response, function( key, val ) {
           if (!val.private) {
             var name = (val.name != null) ? val.name : "";
-            var $item = $("<div>").addClass("card pin col-sm-5 col-md-4 col-lg-3 ");
+            var $item = $("<div>").addClass("card pin col-sm-5 col-md-4 col-lg-3 ").attr('id',name);
             var $link = $( "<a>" ).attr( "href", val.html_url ).appendTo($item);
-            $link.append($("<h5>").text((val.name != null) ? val.name : ""));
+            $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
             if (name.indexOf("OAuth") >= 0 || name.indexOf("oauth") >= 0 || name.indexOf("Oauth") >= 0) {              
@@ -136,6 +138,32 @@
     });
    
 })();
+
+$('#search').keyup(function() {
+console.log("inside");
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    $rows = $(".card")
+    $rows.show().filter(function() {
+      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+      return !~text.indexOf(val);
+    }).hide();
+    
+    // update repo count here
+    n = $rows.length;
+    for (r in $rows)
+    {
+      row = $rows[r];
+      style = row.style;
+      if (style && style.cssText && style.cssText.match("none"))
+      {
+        n--;
+      }
+
+    }
+
+    
+});
+
 </script>
  
 </body>
