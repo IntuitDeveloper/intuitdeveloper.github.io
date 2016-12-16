@@ -77,7 +77,21 @@ body {
   text-transform: none;
 }
 
+#dotnet {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
+}
+
 #webhooks {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
+}
+
+#java {
   
   padding-top: 2px;
   background-color: #fff;
@@ -91,7 +105,28 @@ body {
   text-transform: none;
 }
 
+#nodejs {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
+}
+
 #timetracking {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
+}
+
+#php {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
+}
+
+#python {
   
   padding-top: 2px;
   background-color: #fff;
@@ -105,18 +140,14 @@ body {
   text-transform: none;
 }
 
-#oauth .card
-{
-    margin: 5px;
-    
-    /*border-top: 4px solid #ccc;*/
-    height: 150px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+#others {
+  
+  padding-top: 2px;
+  background-color: #fff;
+  text-transform: none;
 }
 
-#webhooks .card
-{
+#oauth .card {
     margin: 5px;
     
     /*border-top: 4px solid #ccc;*/
@@ -124,8 +155,7 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-#crud .card
-{
+#webhooks .card {
     margin: 5px;
     
     /*border-top: 4px solid #ccc;*/
@@ -133,8 +163,7 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-#timetracking .card
-{
+#crud .card {
     margin: 5px;
     
     /*border-top: 4px solid #ccc;*/
@@ -142,8 +171,63 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-#other .card
-{
+#timetracking .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#other .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#dotnet .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#java .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#nodejs .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#php .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#python .card {
+    margin: 5px;
+    
+    /*border-top: 4px solid #ccc;*/
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#others .card {
     margin: 5px;
     
     /*border-top: 4px solid #ccc;*/
@@ -171,6 +255,14 @@ body {
 .search
 {
   float:right;
+  font-family: 'Helvetica';
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.sort
+{
+  float:left;
   font-family: 'Helvetica';
   padding-right: 0;
   margin-right: 0;
