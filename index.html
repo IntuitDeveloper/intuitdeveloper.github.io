@@ -190,7 +190,7 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.indexOf("DotNet") >= 0 || name.indexOf("dotnet") >= 0) {              
+            if (name.indexOf("DotNet") >= 0 || name.indexOf("dotnet") >= 0 || name.indexOf(".Net") >= 0) {              
               $item.appendTo( "#dotnet" );
             } else if (name.indexOf("Java") >= 0 || name.indexOf("java") >= 0) {            
               $item.appendTo( "#java" );
