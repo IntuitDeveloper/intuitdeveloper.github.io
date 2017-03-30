@@ -164,13 +164,13 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.indexOf("OAuth") >= 0 || name.indexOf("oauth") >= 0 || name.indexOf("Oauth") >= 0) {              
+            if (name.toUpperCase().indexOf("OAUTH") >= 0) {              
               $item.appendTo( "#oauth" );
-            } else if (name.indexOf("Webhooks") >= 0) {            
+            } else if (name.toUpperCase().indexOf("WEBHOOKS") >= 0) {            
               $item.appendTo( "#webhooks" );
-            } else if (name.indexOf("CRUD") >= 0) {
+            } else if (name.toUpperCase().indexOf("CRUD") >= 0) {
               $item.appendTo( "#crud" );
-            } else if (name.indexOf("TimeTracking") >= 0) {         
+            } else if (name.toUpperCase().indexOf("TIMETRACKING") >= 0) {         
               $item.appendTo( "#timetracking" );
             } else {
               $item.appendTo( "#other" );
@@ -188,15 +188,15 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.indexOf("DotNet") >= 0 || name.indexOf("dotnet") >= 0 || name.indexOf(".Net") >= 0) {              
+            if (name.toUpperCase().indexOf("DOTNET") >= 0 || name.indexOf(".NET") >= 0) {              
               $item.appendTo( "#dotnet" );
-            } else if (name.indexOf("Java") >= 0 || name.indexOf("java") >= 0) {            
+            } else if (name.toUpperCase().indexOf("JAVA") >= 0) {            
               $item.appendTo( "#java" );
-            } else if (name.indexOf("node") >= 0) {
+            } else if (name.toUpperCase().indexOf("NODE") >= 0) {
               $item.appendTo( "#nodejs" );
-            } else if (name.indexOf("php") >= 0 || name.indexOf("PHP") >= 0) {         
+            } else if (name.toUpperCase().indexOf("PHP") >= 0) {         
               $item.appendTo( "#php" );
-            } else if (name.indexOf("python") >= 0) {
+            } else if (name.toUpperCase().indexOf("PYTHON") >= 0) {
               $item.appendTo( "#python" );
             } else {
               $item.appendTo( "#others" );
