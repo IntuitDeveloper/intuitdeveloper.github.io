@@ -199,7 +199,7 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.toUpperCase().indexOf("DOTNET") >= 0 || name.indexOf(".NET") >= 0) {              
+            if (name.toUpperCase().indexOf("DOTNET") >= 0 || name.toUpperCase().indexOf(".NET") >= 0) {              
               $item.appendTo( "#dotnet" );
             } else if (name.toUpperCase().indexOf("JAVA") >= 0) {            
               $item.appendTo( "#java" );
