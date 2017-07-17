@@ -51,7 +51,8 @@
         <p class="lead">Not sure where to start? We’ve put together some handy sample apps and libraries you can use to start building.</p>
         <nav class="menu-navigation">
           <ul class="menu-navigation-list">
-            <li class="menu-navigation-list-item feature"><a href="#oauthtitle">OAuth</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#oauth2title">OAuth2.0</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#oauthtitle">OAuth1.0a</a></li>
             <li class="menu-navigation-list-item feature"><a href="#webhookstitle">Webhooks</a></li>
             <li class="menu-navigation-list-item feature"><a href="#crudtitle">CRUD Samples</a></li>
             <li class="menu-navigation-list-item feature"><a href="#timetrackingtitle">Time Tracking</a></li>
@@ -88,35 +89,40 @@
           </div>
         </div>
 
+      <!-- oauth2 -->
+      <div id="oauth2title" class="section-title feature"><span class="title">OAUTH2.0</span></div> 
+      <div id="oauth2" class="columns section in feature" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
       <!-- oauth -->
-      <div id="oauthtitle" class="section-title feature"><span class="title">OAuth</span></div> 
+      <div id="oauthtitle" class="section-title feature"><span class="title">OAUTH1.0a</span></div> 
       <div id="oauth" class="columns section in feature" style="height: auto;"></div>
 
       <!-- DotNet -->
-      <div id="dotnettitle" class="section-title language"><span class="title">DotNet</span></div> 
+      <div id="dotnettitle" class="section-title language"><span class="title">DOTNET</span></div> 
       <div id="dotnet" class="columns section in language" style="height: auto;"></div>
       <div class="separator gap"></div>
 
       <!-- webhooks -->
-      <div id="webhookstitle" class="section-title feature"><span class="title">Webhooks</span></div> 
+      <div id="webhookstitle" class="section-title feature"><span class="title">WEBHOOKS</span></div> 
       <div id="webhooks" class="columns section in feature" style="height: auto;"></div>
 
       <!-- Java -->
-      <div id="javatitle" class="section-title language"><span class="title">Java</span></div> 
+      <div id="javatitle" class="section-title language"><span class="title">JAVA</span></div> 
       <div id="java" class="columns section in language" style="height: auto;"></div>
       <div class="separator gap"></div>
     
       <!-- crud -->
-      <div id="crudtitle" class="section-title feature"><span class="title">CRUD Samples</span></div>
+      <div id="crudtitle" class="section-title feature"><span class="title">CRUD SAMPLES</span></div>
       <div id="crud" class="columns section in feature" style="height: auto;"></div>
 
       <!-- Nodejs -->
-      <div id="nodejstitle" class="section-title language"><span class="title">Node.js</span></div>
+      <div id="nodejstitle" class="section-title language"><span class="title">NODE.JS</span></div>
       <div id="nodejs" class="columns section in language" style="height: auto;"></div>
       <div class="separator gap"></div>
       
       <!-- time tracking -->
-      <div id="timetrackingtitle" class="section-title feature"><span class="title">Time Tracking</span></div>
+      <div id="timetrackingtitle" class="section-title feature"><span class="title">TIME TRACKING</span></div>
       <div id="timetracking" class="columns section in feature" style="height: auto;"></div>
 
       <!-- PHP -->
@@ -125,17 +131,17 @@
       <div class="separator gap"></div>
 
       <!-- other -->
-      <div id="othertitle" class="section-title feature"><span class="title">Other Samples</span></div>
+      <div id="othertitle" class="section-title feature"><span class="title">OTHER SAMPLES</span></div>
       <div id="other" class="columns section in feature" style="height: auto;"></div>
 
       <!-- Python -->
-      <div id="pythontitle" class="section-title language"><span class="title">Python</span></div>
+      <div id="pythontitle" class="section-title language"><span class="title">PYTHON</span></div>
       <div id="python" class="columns section in language" style="height: auto;"></div>
 
       <div class="separator gap"></div>
 
       <!-- Other -->
-      <div id="otherstitle" class="section-title language"><span class="title">Other</span></div>
+      <div id="otherstitle" class="section-title language"><span class="title">OTHER</span></div>
       <div id="others" class="columns section in language" style="height: auto;"></div>
 
 
@@ -175,8 +181,10 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.toUpperCase().indexOf("OAUTH") >= 0) {              
+            if (name.toUpperCase().indexOf("OAUTH") >= 0 && name.toUpperCase().indexOf("OAUTH2") != 0) {              
               $item.appendTo( "#oauth" );
+            } else if (name.toUpperCase().indexOf("OAUTH2") >= 0) {            
+              $item.appendTo( "#oauth2" );
             } else if (name.toUpperCase().indexOf("WEBHOOKS") >= 0) {            
               $item.appendTo( "#webhooks" );
             } else if (name.toUpperCase().indexOf("CRUD") >= 0) {
