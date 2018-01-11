@@ -55,6 +55,7 @@
             <li class="menu-navigation-list-item feature"><a href="#oauthtitle">OAuth1.0a</a></li>
             <li class="menu-navigation-list-item feature"><a href="#webhookstitle">Webhooks</a></li>
             <li class="menu-navigation-list-item feature"><a href="#crudtitle">CRUD Samples</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#paymentstitle">Payments</a></li>
             <li class="menu-navigation-list-item feature"><a href="#timetrackingtitle">Time Tracking</a></li>
             <li class="menu-navigation-list-item feature"><a href="#othertitle">Other Samples</a></li>
             <li class="menu-navigation-list-item language"><a href="#dotnettitle">DotNet</a></li>
@@ -120,14 +121,19 @@
       <div id="nodejstitle" class="section-title language"><span class="title">NODE.JS</span></div>
       <div id="nodejs" class="columns section in language" style="height: auto;"></div>
       <div class="separator gap"></div>
-      
-      <!-- time tracking -->
-      <div id="timetrackingtitle" class="section-title feature"><span class="title">TIME TRACKING</span></div>
-      <div id="timetracking" class="columns section in feature" style="height: auto;"></div>
+
+      <!-- payments  -->
+      <div id="paymentstitle" class="section-title feature"><span class="title">PAYMENTS</span></div>
+      <div id="payments" class="columns section in feature" style="height: auto;"></div>
 
       <!-- PHP -->
       <div id="phptitle" class="section-title language"><span class="title">PHP</span></div>
       <div id="php" class="columns section in language" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
+      <!-- time tracking -->
+      <div id="timetrackingtitle" class="section-title feature"><span class="title">TIME TRACKING</span></div>
+      <div id="timetracking" class="columns section in feature" style="height: auto;"></div>
       <div class="separator gap"></div>
 
       <!-- other -->
@@ -137,7 +143,6 @@
       <!-- Python -->
       <div id="pythontitle" class="section-title language"><span class="title">PYTHON</span></div>
       <div id="python" class="columns section in language" style="height: auto;"></div>
-
       <div class="separator gap"></div>
 
       <!-- Other -->
@@ -150,7 +155,7 @@
   <!-- Site footer -->
     <footer class="footer">
       <nav class="footer-navigation">
-        <p class="copyright">&copy; 2017 Intuit, Inc. All rights reserved. Intuit and QuickBooks are registered trademarks of Intuit Inc. </p>
+        <p class="copyright">&copy; 2018 Intuit, Inc. All rights reserved. Intuit and QuickBooks are registered trademarks of Intuit Inc. </p>
       </nav>
     </footer>
  
@@ -191,6 +196,8 @@
               $item.appendTo( "#crud" );
             } else if (name.toUpperCase().indexOf("TIMETRACKING") >= 0) {         
               $item.appendTo( "#timetracking" );
+            } else if (name.toUpperCase().indexOf("PAYMENT") >= 0) {
+              $item.appendTo( "#payments" );
             } else {
               $item.appendTo( "#other" );
             }
