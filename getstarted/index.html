@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- for GA tracking-->
+    <meta name="ippcat" content="GitHub" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Intuit Developer @ Github</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+    <script src="../resources/config.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+      <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+       
+        <h3 id="titlehead" >Intuit Developer<a id="githublink" href="http://github.com/intuitdeveloper">Intuit Developer Github</a></br>
+      </div>
+      <hr>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h3>Getting started with QuickBooks API</h3>
+      </div>
+      <hr>
+      
+
+
+      <!-- oauth2 -->
+      <div id="oauth2title" class="section-title feature"><span class="title">GET STARTED</span></div> 
+      <div id="oauth2" class="columns section in feature" style="height: auto;"></div>
+      <ol class="list">
+        <li>
+          <p>Create a <a href="https://developer.intuit.com" target="_blank">developer account</a></p>
+        </li>
+        <li>
+          <p>Create an <a href="https://developer.intuit.com/v2/ui#/app/startcreate" target="_blank">app</a></p>
+        </li>
+        <li>
+          <p>Generate OAuth tokens using <a href="https://developer.intuit.com/v2/ui#/playground" target="_blank">playround</a></p>
+        </li>
+        <li>
+          <p>Make the API call - <a href="#" onclick="myFunction()" >click</a> to see the curl request</p>
+          <div style="display:none" id="myDIV">
+            curl -X GET 'https://sandbox-quickbooks.api.intuit.com/v3/company/company id/companyinfo/company id/?minorversion=12' -H 'accept: application/json' -H 'authorization: Bearer accesstoken' -H 'content-type: application/json' 
+          </div>
+        </li>
+      </ol>
+      <div class="separator gap"></div>
+
+      <!-- oauth -->
+      <div id="oauthtitle" class="section-title feature"><span class="title">DEVELOPER TOOLS</span></div> 
+      <div id="oauth" class="columns section in feature" style="height: auto;"></div>
+      <ol class="list">
+        <li>
+          <p>Explore API using <a href="https://developer.intuit.com/v2/apiexplorer?apiname=V3QBO#?id=Account" target="_blank">API explorer</a></p>
+        </li>
+        <li>
+          <p>Download <a href="https://github.com/intuitdeveloper" target="_blank">samples</a></p>
+        </li>
+        <li>
+          <p>Use SDK to code faster - <a href="https://github.com/intuit/QuickBooks-V3-DotNET-SDK" target="_blank">DotNet</a> - <a href="https://github.com/intuit/QuickBooks-V3-Java-SDK" target="_blank">Java</a> - <a href="https://github.com/intuit/QuickBooks-V3-PHP-SDK" target="_blank">PHP</a> - <a href="https://developer.intuit.com/docs/00_quickbooks_online/2_build/40_sdks/04_other_languages" target="_blank">Other</a></p>
+        </li>
+        <li>
+          <p>Download <a href="https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/20_postman" target="_default">postman collection</a></p>
+        </li>
+        <li>
+          <p>Use <a href="https://developer.intuit.com/v2/ui#/sandbox" target="_blank">sandbox</a> for testing</p>
+        </li>
+      </ol>
+      
+
+
+
+
+  </div> <!-- /container -->
+
+  <!-- Site footer -->
+    <footer class="footer">
+      <nav class="footer-navigation">
+        <p class="copyright">&copy; 2018 Intuit, Inc. All rights reserved. Intuit and QuickBooks are registered trademarks of Intuit Inc. </p>
+      </nav>
+    </footer>
+ 
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+ 
+</body>
+</html>
