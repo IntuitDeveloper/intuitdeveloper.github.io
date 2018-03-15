@@ -56,7 +56,7 @@
             <li class="menu-navigation-list-item feature"><a href="#webhookstitle">Webhooks</a></li>
             <li class="menu-navigation-list-item feature"><a href="#crudtitle">CRUD Samples</a></li>
             <li class="menu-navigation-list-item feature"><a href="#paymentstitle">Payments</a></li>
-            <li class="menu-navigation-list-item feature"><a href="#timetrackingtitle">Time Tracking</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#invoicetitle">Invoicing</a></li>
             <li class="menu-navigation-list-item feature"><a href="#othertitle">Other Samples</a></li>
             <li class="menu-navigation-list-item language"><a href="#dotnettitle">DotNet</a></li>
             <li class="menu-navigation-list-item language"><a href="#javatitle">Java</a></li>
@@ -131,9 +131,9 @@
       <div id="php" class="columns section in language" style="height: auto;"></div>
       <div class="separator gap"></div>
 
-      <!-- time tracking -->
-      <div id="timetrackingtitle" class="section-title feature"><span class="title">TIME TRACKING</span></div>
-      <div id="timetracking" class="columns section in feature" style="height: auto;"></div>
+      <!-- invoice -->
+      <div id="invoicetitle" class="section-title feature"><span class="title">INVOICING</span></div>
+      <div id="invoice" class="columns section in feature" style="height: auto;"></div>
       <div class="separator gap"></div>
 
       <!-- other -->
@@ -186,16 +186,16 @@
             $link.append($("<h5>").text(name));
             $item.append($("<p>").text((val.description != null) ? val.description : ""));
             
-            if (name.toUpperCase().indexOf("OAUTH") >= 0 && name.toUpperCase().indexOf("OAUTH2") != 0) {              
+            if (name.toUpperCase().indexOf("CRUD") >= 0) {
+              $item.appendTo( "#crud" );
+            } else if (name.toUpperCase().indexOf("OAUTH") >= 0 && name.toUpperCase().indexOf("OAUTH2") != 0) {              
               $item.appendTo( "#oauth" );
             } else if (name.toUpperCase().indexOf("OAUTH2") >= 0) {            
               $item.appendTo( "#oauth2" );
-            } else if (name.toUpperCase().indexOf("WEBHOOKS") >= 0) {            
+            } else if (name.toUpperCase().indexOf("WEBHOOK") >= 0) {            
               $item.appendTo( "#webhooks" );
-            } else if (name.toUpperCase().indexOf("CRUD") >= 0) {
-              $item.appendTo( "#crud" );
-            } else if (name.toUpperCase().indexOf("TIMETRACKING") >= 0) {         
-              $item.appendTo( "#timetracking" );
+            } else if (name.toUpperCase().indexOf("INVOIC") >= 0) {         
+              $item.appendTo( "#invoice" );
             } else if (name.toUpperCase().indexOf("PAYMENT") >= 0) {
               $item.appendTo( "#payments" );
             } else {
