@@ -52,10 +52,12 @@
         <nav class="menu-navigation">
           <ul class="menu-navigation-list">
             <li class="menu-navigation-list-item feature"><a href="#oauth2title">OAuth2.0</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#helloworldtitle">HelloWorld</a></li>
             <li class="menu-navigation-list-item feature"><a href="#oauthtitle">OAuth1.0a</a></li>
             <li class="menu-navigation-list-item feature"><a href="#webhookstitle">Webhooks</a></li>
             <li class="menu-navigation-list-item feature"><a href="#crudtitle">CRUD Samples</a></li>
             <li class="menu-navigation-list-item feature"><a href="#paymentstitle">Payments</a></li>
+            <li class="menu-navigation-list-item feature"><a href="#conceptstitle">QBO Concepts</a></li>
             <li class="menu-navigation-list-item feature"><a href="#invoicetitle">Invoicing</a></li>
             <li class="menu-navigation-list-item feature"><a href="#othertitle">Other Samples</a></li>
             <li class="menu-navigation-list-item language"><a href="#dotnettitle">DotNet</a></li>
@@ -95,6 +97,11 @@
       <div id="oauth2" class="columns section in feature" style="height: auto;"></div>
       <div class="separator gap"></div>
 
+      <!-- hello work -->
+      <div id="helloworldtitle" class="section-title feature"><span class="title">HELLO WORLD</span></div> 
+      <div id="helloworld" class="columns section in feature" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
       <!-- oauth -->
       <div id="oauthtitle" class="section-title feature"><span class="title">OAUTH1.0a</span></div> 
       <div id="oauth" class="columns section in feature" style="height: auto;"></div>
@@ -125,6 +132,12 @@
       <!-- payments  -->
       <div id="paymentstitle" class="section-title feature"><span class="title">PAYMENTS</span></div>
       <div id="payments" class="columns section in feature" style="height: auto;"></div>
+      <div class="separator gap"></div>
+
+      <!-- oauth2 -->
+      <div id="conceptstitle" class="section-title feature"><span class="title">QBO CONCEPTS SAMPLES</span></div> 
+      <div id="concepts" class="columns section in feature" style="height: auto;"></div>
+      <div class="separator gap"></div>
 
       <!-- PHP -->
       <div id="phptitle" class="section-title language"><span class="title">PHP</span></div>
@@ -198,6 +211,10 @@
               $item.appendTo( "#invoice" );
             } else if (name.toUpperCase().indexOf("PAYMENT") >= 0) {
               $item.appendTo( "#payments" );
+            } else if (name.toUpperCase().indexOf("HELLO") >= 0) {
+              $item.appendTo( "#helloworld" );
+            } else if (name.toUpperCase().indexOf("CONCEPTS") >= 0) {
+              $item.appendTo( "#concepts" );
             } else {
               $item.appendTo( "#other" );
             }
