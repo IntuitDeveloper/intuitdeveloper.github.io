@@ -1,5 +1,5 @@
 # SmallBizHack Sydney
-*Welcome to SmallBizHack Sydney 2018!* Here you will find useful information and sample code to complete your app. 
+**Welcome to SmallBizHack Sydney 2018!** Here you will find useful information and sample code to complete your app. 
 
 * [The challenge](#the-challenge)
 * [APIs at your disposal](#apis-at-your-disposal)
@@ -7,10 +7,11 @@
 * [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
 * [Hello QuickBooks!](#hello-quickbooks!)
     *  [Testing the API with Postman](#testing-the-api-with-postman)
-    *  [Using our sample code](#sample-code)
+    *  [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code]
+    
 
 # The challenge
-Create a solution that saves a small business time or money
+**Create a solution that saves a small business time or money**
 
 # APIs at your disposal
 This hack is all about creating new innovations that help small businesses. We encourage you to use the APIs below _(HINT HINT: there are special prizes for the teams who best utilise these APIs)_, but you're free to use any other APIs and frameworks to bring your app to life. 
@@ -37,7 +38,7 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 
 There are available libraries to generate OAuth 2.0 tokens. For simplicty sake here we'll show you how to manually generate the token using our OAuth playground. You can then get to your first succesful API call in minutes by plugging the obtained OAuth 2.0 token in Postman or our sample codes.
 
-1. Sign up for an account on [​developer.intuit.com](​https://developer.intuit.com)
+1. Sign up for an account at [https://developer.intuit.com](​https://developer.intuit.com)
 
 2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app**
 
@@ -45,15 +46,15 @@ There are available libraries to generate OAuth 2.0 tokens. For simplicty sake h
 
 3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret`
 
-4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox) to run APIs against. Select `Australia` in the drop down and click `add` to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks app to understand how it works.
+4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox). Select `Australia` in the drop down country list and click **add** to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks app to understand how it works.
 
-5. Time to grant your app access to the Sandbox company and generate your access token using the [OAuth playground] (https://developer.intuit.com/v2/ui#/playground). Select `Accounting` for the scope.
+5. Time to grant your app access to the Sandbox company and generate your access token using the [OAuth playground](https://developer.intuit.com/v2/ui#/playground). Select `Accounting` for the scope.
 
-6. Click on `Get authorization code`. You will be presented with an authorisation dialogue. Select your sandbox company and click `connect`. 
+6. Click on **Get authorization code**. You will be presented with an authorisation dialogue. Select your sandbox company and click **connect**. 
 
 7. Back in the OAuth playground, note down the `Realm Id`. This is a unique identifier for your Sandbox QuickBooks account which you will need later on.  We sometimes refer to it as "Company Id"
 
-8. Now click on `Get Token` to exhange the authorization code for your access and refresh tokens. If all goes well you should be presented with a response like below:
+8. Now click on **Get Token** to exhange the authorization code for your access and refresh tokens. If all goes well you should be presented with a response like below:
 
 ```json
 {
@@ -76,7 +77,7 @@ Here's a run down of the OAuth response from QuickBooks:
 
 ## Testing the API with Postman
 
- **NOTE**: The POSTMAN client and collection we've created is  a great way to navigate the API and test the capabilities of QuickBooks before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [using our sample code](#sample-code) 
+ The Postman client is  a great way to navigate the QuickBooks API before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [using our sample code](#sample-code) 
 
 **TIP**: There is a handy code generator in POSTMAN which will generate code snippets in most available laguages. ![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-code-snippets.jpg "Postman code snippets") 
 
