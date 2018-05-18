@@ -1,10 +1,10 @@
 # SmallBizHack Sydney
-Welcome to SmallBizHack Sydney 2018! Here you will find useful information and sample code to complete your app. 
+*Welcome to SmallBizHack Sydney 2018!* Here you will find useful information and sample code to complete your app. 
 
 * [The challenge](#the-challenge)
 * [APIs at your disposal](#apis-at-your-disposal)
 * [Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
-* [Setting up OAuth 2.0 access](#setting-up-oauth-2.0-access)
+* [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
 * [Hello QuickBooks!](#hello-quickbooks!)
     *  [Testing the API with Postman](#testing-the-api-with-postman)
     *  [Using our sample code](#sample-code)
