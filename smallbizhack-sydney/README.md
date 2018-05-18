@@ -7,7 +7,7 @@
 * [Creating your QuickBooks app](#creating-your-quickbooks-app)
 * [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
 * Hello QuickBooks!
-    * [Testing the API with Postman](##testing-the-api-with-postman)
+    * [Testing the API with Postman](#testing-the-api-with-postman)
     * [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code)
 * Get notified when data changes
     * [Webhooks](#webhooks)
