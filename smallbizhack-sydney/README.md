@@ -42,7 +42,7 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 
 # Creating your QuickBooks app
 
-1. Sign up for an account at [https://developer.intuit.com](​https://developer.intuit.com)
+1. Sign up for an account at [https://developer.intuit.com](https://developer.intuit.com)
 
 2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app**
 
@@ -68,9 +68,9 @@ There are available libraries to generate OAuth 2.0 tokens. For simplicty  we'll
 
 ![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/oauth-playground-connect.jpg "Authorization dialogue") 
 
-3. Back in the OAuth playground, note down the `Realm Id`. This is a unique identifier for your Sandbox QuickBooks account which you will need later on.  We sometimes refer to it as "Company Id"
+3. Back in the OAuth playground, note down the `Realm Id`. This is a unique identifier for your Sandbox QuickBooks account which you will need later on.  We sometimes refer to `it as *Company Id*
 
-4. Now click on **Get Token** to exhange the authorization code for your access and refresh tokens. If all goes well you should be presented with a response like below:
+4. Now click on **Get Token** to exhange the authorization code for your `access_token` and `refresh_token`. If all goes well you should be presented with a response like below:
 
 ```json
 {
@@ -93,7 +93,7 @@ Here's a run down of the OAuth response from QuickBooks:
 
 ## Testing the API with Postman
 
-The Postman client is  a great way to navigate the QuickBooks API before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [using our sample code](#sample-code) 
+The Postman client is  a great way to navigate the QuickBooks API before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code)
 
 **TIP**: There is a handy code generator in POSTMAN which will generate code snippets in most available laguages. 
 
@@ -107,7 +107,7 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 ![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-variables.jpg "Postman environment variables") 
 
-**TIP **: Change the `UserAgent` to something unique (your team name) so your requests can be tracked by Intuit Engineers to help debug your code if necessary
+**TIP**: Change the `UserAgent` to something unique (your team name) so your requests can be tracked by Intuit Engineers to help debug your code if necessary
 
 4. Now paste the Access Token from the OAuth playground 
 
@@ -116,11 +116,15 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 5. For this example, we are doing a data query using the QuickBooks `query` endpoint against the `customer` entity. Click on the **customer** folder in the Postman explorer panel, and select the **Customer-ReadAll** request.
 
-     We want to get a list of all the customers that owe my small business client money! The query API uses SQL like queries (_note: we will soon be launching a GraphQL version of the API which will improve performance and code efficiency_). In the **body** tab, change the SQL query to:
+     We want to get a list of all the customers that owe my small business client money! 
+     
+     **NOTE**: The query API uses SQL like queries. See details of the [query API](https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/50_data_queries). We will soon be launching a GraphQL version of the API which will improve performance and code efficiency_). 
+     
+     In the **body** tab, change the SQL query to:
 
     ```SELECT * FROM customer WHERE Balance > '0.0'```
  
-    More details on the [query API](https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/50_data_queries)
+   
 
 6. Click **Send**. You should get back a list of customers who have unpaid balance.
 
@@ -131,9 +135,9 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 Samples are available in the following languages, use the readme within the individual language folder for additional instructions on how to run the sample and plugin the OAUth 2.0 token.
 
-* [DotNet](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/dotnet)
-* [Java](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/java)
-* [Nodejs](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/nodejs)
+* [DotNet](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/dotnet/SampleApp_hackathon)
+* [Java](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/java)
+* [Nodejs](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/nodejs)
 * [PHP](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/php)
 * [Python](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/python)
 
@@ -141,8 +145,8 @@ Samples are available in the following languages, use the readme within the indi
 # Get notified when data changes
 
 To track data changes there are different mechanisms:
-* run a periodic query with date filter to download what changed since your last run. Refer to CDC section below
-* register a listener for change events 
+* Change data capture (CDC): run a periodic query with date filter to download what changed since your last run.
+* Webhooks: register a listener for change events 
 
 
 ## Webhooks
@@ -153,7 +157,7 @@ change for all company ids you are tracking.
 To configure your local machine to receive webhooks events: 
 1. Download & install 8.0 or higher version of nodejs from [here](https://nodejs.org/en/download/)
 2. Start the local webserver, this server will log all incoming traffic to console. `node sink.js`
-3. Make your webserver public using [ngrok](https://ngrok.com/). Install ngrok & create a tunnel between ngrok `ngrok http 3000`
+3. Make your webserver public using [ngrok](https://ngrok.com/). Install ngrok & create a tunnel between ngrok: `ngrok http 3000`
 4. Go to webhooks section for your app on developer.intuit.com and update the address to ngrok
 supplied dns (make sure to sure the https version) in the “Developer Webhooks” section. Also
 subscribe to changes to all entities
