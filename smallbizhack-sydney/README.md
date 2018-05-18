@@ -3,10 +3,10 @@ Welcome to SmallBizHack Sydney 2018! Here you will find useful information and s
 
 * [The challenge](#the-challenge)
 * [APIs at your disposal](#apis-at-your-disposal)
-* [3. Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
-* [4. Setting up OAuth 2.0 access](#setting-up-oauth-2.0-access)
-* [5. Hello QuickBooks! Making your first API call](#hello-quickBooks)
-    *  [Using POSTMAN](#postman)
+* [Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
+* [Setting up OAuth 2.0 access](#setting-up-oauth-2.0-access)
+* [Hello QuickBooks!](#hello-quickbooks!)
+    *  [Testing the API with Postman](#testing-the-api-with-postman)
     *  [Using our sample code](#sample-code)
 
 # The challenge
@@ -72,9 +72,9 @@ Here's a run down of the OAuth response from QuickBooks:
 * `refresh_token`: Required to acquire a short lived `access token`. These last 100 days, but whenever our token endpoint returns a new one for the same company, start using it instead for subsequent calls. If the token is lost, generate a new refresh token by re-authorising your app.
 * `id_token`: JSON web token containing information about the user and company which authorised your app. The token is base 64 encoded. You can head to https://jwt.io/ to decode it and check what is in there.
 
-# Hello QuickBooks! Making your first API call
+# Hello QuickBooks!
 
-## Testing the API with POSTMAN
+## Testing the API with Postman
 
  **NOTE**: The POSTMAN client and collection we've created is  a great way to navigate the API and test the capabilities of QuickBooks before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [using our sample code](#sample-code) 
 
