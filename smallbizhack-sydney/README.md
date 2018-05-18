@@ -1,18 +1,18 @@
 # SmallBizHack Sydney
 Welcome to SmallBizHack Sydney 2018! Here you will find useful information and sample code to complete your app. 
 
-* [1. The challenge](#1-the-challenge)
-* [2. APIs at your disposal](#apis-at-your-disposal)
+* [The challenge](#the-challenge)
+* [APIs at your disposal](#apis-at-your-disposal)
 * [3. Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
 * [4. Setting up OAuth 2.0 access](#setting-up-oauth-2.0-access)
 * [5. Hello QuickBooks! Making your first API call](#hello-quickBooks)
     *  [Using POSTMAN](#postman)
     *  [Using our sample code](#sample-code)
 
-# 1 - The challenge
+# The challenge
 Create a solution that saves a small business time or money
 
-# 2. APIs at your disposal
+# APIs at your disposal
 This hack is all about creating new innovations that help small businesses. We encourage you to use the APIs below _(HINT HINT: there are special prizes for the teams who best utilise these APIs)_, but you're free to use any other APIs and frameworks to bring your app to life. 
 
 * For **QuickBooks API**, you're in the right place. Read on below!
@@ -20,7 +20,7 @@ This hack is all about creating new innovations that help small businesses. We e
 * For **Google cloud API**, head to [cloud.google.com/apis](https://cloud.google.com/apis/)
 * For **PayPal API**, head to [developer.paypal.com](https://developer.paypal.com/)
 
-# 3. Intro to the QuickBooks APIs
+# Intro to the QuickBooks APIs
 Every small business needs to track their income, expense and profits, pay employees or lodge tax. They use an accounting application like QuickBooks to automate these painful tasks. QuickBooks is designed as an open ecosystem for small businesses, so YOU can build an app which hooks onto QuickBooks, to solve the myriad of other painpoints associated with running a business. 
 
 Once your app is granted access to their QuickBooks account by a business owner, you can consume a rich set of financial data via the QuickBooks acccounting APIs. You can use this data and the available  APIs to to help them run their business more efficiently. 
@@ -33,7 +33,7 @@ Common tasks performed by the QuickBooks API include:
 
 Check the [API reference](https://developer.intuit.com/docs/api/accounting) for the complete list of APIs. Do also check our app marketplace [apps.com](https://www.apps.com) for example of use cases and apps which use the QuickBooks APIs.
 
-## 4. Setting up OAuth 2.0 access
+# 4. Setting up OAuth 2.0 access
 
 There are available libraries to generate OAuth 2.0 tokens. For simplicty sake here we'll show you how to manually generate the token using our OAuth playground. You can then get to your first succesful API call in minutes by plugging the obtained OAuth 2.0 token in Postman or our sample codes.
 
@@ -72,7 +72,7 @@ Here's a run down of the OAuth response from QuickBooks:
 * `refresh_token`: Required to acquire a short lived `access token`. These last 100 days, but whenever our token endpoint returns a new one for the same company, start using it instead for subsequent calls. If the token is lost, generate a new refresh token by re-authorising your app.
 * `id_token`: JSON web token containing information about the user and company which authorised your app. The token is base 64 encoded. You can head to https://jwt.io/ to decode it and check what is in there.
 
-# 5. Hello QuickBooks! Making your first API call
+# Hello QuickBooks! Making your first API call
 
 ## Testing the API with POSTMAN
 
