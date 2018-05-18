@@ -33,7 +33,7 @@ Common tasks performed by the QuickBooks API include:
 
 Check the [API reference](https://developer.intuit.com/docs/api/accounting) for the complete list of APIs. Do also check our app marketplace [apps.com](https://www.apps.com) for example of use cases and apps which use the QuickBooks APIs.
 
-# 4. Setting up OAuth 2.0 access
+# Setting up OAuth 2.0 access
 
 There are available libraries to generate OAuth 2.0 tokens. For simplicty sake here we'll show you how to manually generate the token using our OAuth playground. You can then get to your first succesful API call in minutes by plugging the obtained OAuth 2.0 token in Postman or our sample codes.
 
