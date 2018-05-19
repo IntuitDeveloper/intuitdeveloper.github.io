@@ -4,16 +4,14 @@
 * [The challenge](#the-challenge)
 * [APIs at your disposal](#apis-at-your-disposal)
 * [Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
-* [Creating your QuickBooks app](#creating-your-quickbooks-app)
-* [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
-* Hello QuickBooks!
+* [Useful developer tools](#useful-developer-tools)
+* [Hello QuickBooks - 5 minutes tutorial](#helloquickbooks-5minutestutorial)
+    * [Creating your QuickBooks app](#creating-your-quickbooks-app)
+    * [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
     * [Testing the API with Postman](#testing-the-api-with-postman)
-    * [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code)
-* Get notified when data changes
+* [Going deeper with the QuickBooks API](#going-deeper-with-the-quickbooks-api)
     * [Webhooks](#webhooks)
     * [Change data capture (CDC)](#change-data-capture-cdc)
-
-    
 
 # The challenge
 **Create a solution that saves a small business time or money**
@@ -39,18 +37,26 @@ Common tasks performed by the QuickBooks API include:
 
 Check the [API reference](https://developer.intuit.com/docs/api/accounting) for the complete list of APIs. Do also check our app marketplace [apps.com](https://www.apps.com) for example of use cases and apps which use the QuickBooks APIs.
 
+# Useful developer tools
 
-# Creating your QuickBooks app
+* Download [samples and SDKs](https://intuitdeveloper.github.io/)
+* Explore the API using the [API explorer](https://developer.intuit.com/v2/apiexplorer?apiname=V3QBO#?id=Account)
+* Explore the API using [Postman](https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/20_postman)
+* Use [Sandbox](https://developer.intuit.com/v2/ui#/sandbox) for testing
+
+# Hello QuickBooks - 5 minutes tutorial
+
+## Creating your QuickBooks app
 
 1. Sign up for an account at [https://developer.intuit.com](https://developer.intuit.com)
 
 2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app** ![alt-text](https://intuitdeveloper.github.io/assets/img/create-app.png "create your QuickBooks app") 
 
-3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret` ![alt-text](https://intuitdeveloper.github.io/assets/img/get-your-keys.jpg "Get your app keys") 
+3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret` ![alt-text](https://intuitdeveloper.github.io/assets/img/get-your-keys.jpg "Get your app keys")
 
 4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox). Select `Australia` in the drop down country list and click **add** to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks application to understand how it works. ![alt-text](https://intuitdeveloper.github.io/assets/img/create-sandbox.jpg "Create sandbox account") 
 
-# Setting up OAuth 2.0 access
+## Setting up OAuth 2.0 access
 
 If you are not familiar with OAuth 2.0, check [understand OAuth in 5 mins](https://aaronparecki.com/oauth-2-simplified/#roles)
 
@@ -81,8 +87,6 @@ Here's a run down of the OAuth response from QuickBooks:
 * `refresh_token`: *Required to acquire a short lived `access token`. These last 100 days, but whenever our token endpoint returns a new one for the same company, start using it instead for subsequent calls. If the token is lost, generate a new refresh token by re-authorising your app.*
 * `id_token`: *JSON web token containing information about the user and company which authorised your app. The token is base 64 encoded. You can head to https://jwt.io/ to decode it and check what is in there.*
 
-# Hello QuickBooks!
-
 ## Testing the API with Postman
 
 The Postman client is  a great way to navigate the QuickBooks API before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code)
@@ -111,24 +115,13 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
  
 6. Click **Send**. You should get back a list of customers who have unpaid balance. ![alt-text](https://intuitdeveloper.github.io/assets/img/postman-sample-response.jpg "Postman access token") 
 
+# Going deeper with the QuickBooks API
 
-## Implementing the API with our sample code
-
-Samples are available in the following languages, use the readme within the individual language folder for additional instructions on how to run the sample and plugin the OAUth 2.0 token.
-
-* [DotNet](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/dotnet/SampleApp_hackathon)
-* [Java](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/java)
-* [Nodejs](https://github.com/IntuitDeveloper/HackathonSamples/tree/master/nodejs)
-* [PHP](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/php)
-* [Python](https://github.com/IntuitDeveloper/HackathonSamples/blob/master/python)
-
-
-# Get notified when data changes
+## Get notified when data changes
 
 To track data changes there are different mechanisms:
 * Change data capture (CDC): run a periodic query with date filter to download what changed since your last run.
 * Webhooks: register a listener for change events 
-
 
 ## Webhooks
 
@@ -150,11 +143,3 @@ subscribe to changes to all entities
 Change data capture is the second mechanism for downloading changes to data in QuickBooks
 since you last checked. You will need to track the last date you called this API. In request
 params you can provide both a list of entities & last check date.
-
-
-
-
-
-
-
-
