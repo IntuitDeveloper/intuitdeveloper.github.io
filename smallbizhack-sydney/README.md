@@ -123,7 +123,7 @@ To track data changes there are different mechanisms:
 * Change data capture (CDC): run a periodic query with date filter to download what changed since your last run.
 * Webhooks: register a listener for change events 
 
-## Webhooks
+#### Webhooks
 
 With webhooks enabled for your application, Intuit will notify your endpoint within 5 mins of a
 change for all company ids you are tracking. 
@@ -138,7 +138,7 @@ subscribe to changes to all entities
 5. Change some data.
 6. Wait for 5 mins to see a log on your webserver’s console
 
-## Change data capture (CDC)
+### Change data capture (CDC)
 
 Change data capture is the second mechanism for downloading changes to data in QuickBooks
 since you last checked. You will need to track the last date you called this API. In request
