@@ -46,13 +46,9 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 
 2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app** ![alt-text](https://intuitdeveloper.github.io/assets/img/create-app.png "create your QuickBooks app") 
 
-3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret`
+3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret` ![alt-text](https://intuitdeveloper.github.io/assets/img/get-your-keys.jpg "Get your app keys") 
 
-![alt-text](https://intuitdeveloper.github.io/assets/img/get-your-keys.jpg "Get your app keys") 
-
-4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox). Select `Australia` in the drop down country list and click **add** to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks application to understand how it works.
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/create-sandbox.jpg "Create sandbox account") 
+4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox). Select `Australia` in the drop down country list and click **add** to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks application to understand how it works. ![alt-text](https://intuitdeveloper.github.io/assets/img/create-sandbox.jpg "Create sandbox account") 
 
 # Setting up OAuth 2.0 access
 
@@ -62,9 +58,7 @@ There are available libraries to generate OAuth 2.0 tokens. For simplicty  we'll
 
 1. Head over to the [OAuth playground](https://developer.intuit.com/v2/ui#/playground). Select `Accounting` for the scope.
 
-2. Click on **Get authorization code**. You will be presented with an authorisation dialogue. Select your sandbox company and click **connect**. 
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/oauth-playground-connect.jpg "Authorization dialogue") 
+2. Click on **Get authorization code**. You will be presented with an authorisation dialogue. Select your sandbox company and click **connect**. ![alt-text](https://intuitdeveloper.github.io/assets/img/oauth-playground-connect.jpg "Authorization dialogue") 
 
 3. Back in the OAuth playground, note down the `Realm Id`. This is a unique identifier for your Sandbox QuickBooks account which you will need later on.  We sometimes refer to `it as *Company Id*
 
@@ -93,24 +87,17 @@ Here's a run down of the OAuth response from QuickBooks:
 
 The Postman client is  a great way to navigate the QuickBooks API before you get your hands deep into into your code. You can skip and directly implement the QuickBook API using the sample code provided for this Hackathon - see section [Implementing the API with our sample code](#implementing-the-api-with-our-sample-code)
 
-**TIP**: There is a handy code generator in POSTMAN which will generate code snippets in most available laguages. 
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/postman-code-snippets.jpg "Postman code snippets") 
+**TIP**: There is a handy code generator in POSTMAN which will generate code snippets in most available laguages. ![alt-text](https://intuitdeveloper.github.io/assets/img/postman-code-snippets.jpg "Postman code snippets") 
 
 1. Download the Postman client [www.getpostman.com](https://www.getpostman.com/)
 
 2. Go to our [QuickBooks postman collection page](https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/20_postman) and import the API collection into Postman by clicking **Run in Postman** (make sure to select the first option which uses OAuth 2.0 authorization)
 
-3. Plugin your company Id in the postman environment variable.
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/postman-variables.jpg "Postman environment variables") 
+3. Plugin your company Id in the postman environment variable. ![alt-text](https://intuitdeveloper.github.io/assets/img/postman-variables.jpg "Postman environment variables") 
 
 **TIP**: Change the `UserAgent` to something unique (your team name) so your requests can be tracked by Intuit Engineers to help debug your code if necessary
 
-4. Now paste the Access Token from the OAuth playground 
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/postman-update-access-token.jpg "Postman access token") 
-
+4. Now paste the Access Token from the OAuth playground ![alt-text](https://intuitdeveloper.github.io/assets/img/postman-update-access-token.jpg "Postman access token") 
 
 5. For this example, we are doing a data query using the QuickBooks `query` endpoint against the `customer` entity. Click on the **customer** folder in the Postman explorer panel, and select the **Customer-ReadAll** request.
 
@@ -122,11 +109,7 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
     ```SELECT * FROM customer WHERE Balance > '0.0'```
  
-   
-
-6. Click **Send**. You should get back a list of customers who have unpaid balance.
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/postman-sample-response.jpg "Postman access token") 
+6. Click **Send**. You should get back a list of customers who have unpaid balance. ![alt-text](https://intuitdeveloper.github.io/assets/img/postman-sample-response.jpg "Postman access token") 
 
 
 ## Implementing the API with our sample code
