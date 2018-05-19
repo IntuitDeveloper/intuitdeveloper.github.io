@@ -44,9 +44,7 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 
 1. Sign up for an account at [https://developer.intuit.com](https://developer.intuit.com)
 
-2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app**
-
-![alt-text](https://intuitdeveloper.github.io/assets/img/create-app.png "create your QuickBooks app") 
+2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app** ![alt-text](https://intuitdeveloper.github.io/assets/img/create-app.png "create your QuickBooks app") 
 
 3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret`
 
