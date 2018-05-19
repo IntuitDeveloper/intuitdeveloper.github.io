@@ -46,19 +46,19 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 
 2. Click on **my apps** and choose the **Just start coding** option. Select access to the **accounting** API and click **create app**
 
-![alt-text](https://github.com/jplemoussu/smallbizhack-sydney/blob/master/Images/create-app.png "create your QuickBooks app") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/create-app.png "create your QuickBooks app") 
 
 3. You should now be greeted by your QuickBooks app dashboard. Head over the **Keys** section and note down your `client Id` and `client secret`
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/get-your-keys.jpg "Get your app keys") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/get-your-keys.jpg "Get your app keys") 
 
 4. Create a [Sandbox company](https://developer.intuit.com/v2/ui#/sandbox). Select `Australia` in the drop down country list and click **add** to create a AU small business account with dummy data. Take a moment to login your sandbox account and play around the QuickBooks application to understand how it works.
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/create-sandbox.jpg "Create sandbox account") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/create-sandbox.jpg "Create sandbox account") 
 
 # Setting up OAuth 2.0 access
 
-If you are not familiar with OAuth 2.0, check [understand OAuth in 5 mins]( https://aaronparecki.com/oauth-2-simplified/#roles)
+If you are not familiar with OAuth 2.0, check [understand OAuth in 5 mins](https://aaronparecki.com/oauth-2-simplified/#roles)
 
 There are available libraries to generate OAuth 2.0 tokens. For simplicty  we'll show you how to manually generate the token using our **OAuth playground**. You can then make an API call by just plugging the obtained OAuth 2.0 token in Postman or our sample codes.
 
@@ -66,7 +66,7 @@ There are available libraries to generate OAuth 2.0 tokens. For simplicty  we'll
 
 2. Click on **Get authorization code**. You will be presented with an authorisation dialogue. Select your sandbox company and click **connect**. 
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/oauth-playground-connect.jpg "Authorization dialogue") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/oauth-playground-connect.jpg "Authorization dialogue") 
 
 3. Back in the OAuth playground, note down the `Realm Id`. This is a unique identifier for your Sandbox QuickBooks account which you will need later on.  We sometimes refer to `it as *Company Id*
 
@@ -97,7 +97,7 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 **TIP**: There is a handy code generator in POSTMAN which will generate code snippets in most available laguages. 
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-code-snippets.jpg "Postman code snippets") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/postman-code-snippets.jpg "Postman code snippets") 
 
 1. Download the Postman client [www.getpostman.com](https://www.getpostman.com/)
 
@@ -105,13 +105,13 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 3. Plugin your company Id in the postman environment variable.
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-variables.jpg "Postman environment variables") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/postman-variables.jpg "Postman environment variables") 
 
 **TIP**: Change the `UserAgent` to something unique (your team name) so your requests can be tracked by Intuit Engineers to help debug your code if necessary
 
 4. Now paste the Access Token from the OAuth playground 
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-update-access-token.jpg "Postman access token") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/postman-update-access-token.jpg "Postman access token") 
 
 
 5. For this example, we are doing a data query using the QuickBooks `query` endpoint against the `customer` entity. Click on the **customer** folder in the Postman explorer panel, and select the **Customer-ReadAll** request.
@@ -128,7 +128,7 @@ The Postman client is  a great way to navigate the QuickBooks API before you get
 
 6. Click **Send**. You should get back a list of customers who have unpaid balance.
 
-![alt-text](https://github.com/IntuitDeveloper/intuitdeveloper.github.io/blob/master/smallbizhack-sydney/Images/postman-sample-response.jpg "Postman access token") 
+![alt-text](https://intuitdeveloper.github.io/assets/img/postman-sample-response.jpg "Postman access token") 
 
 
 ## Implementing the API with our sample code
