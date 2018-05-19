@@ -5,7 +5,7 @@
 * [APIs at your disposal](#apis-at-your-disposal)
 * [Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
 * [Useful developer tools](#useful-developer-tools)
-* [Hello QuickBooks - 5 minutes tutorial](#helloquickbooks-5minutestutorial)
+* [Hello QuickBooks (5 minutes tutorial)](#helloquickbooks-5-minutes-tutorial)
     * [Creating your QuickBooks app](#creating-your-quickbooks-app)
     * [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
     * [Testing the API with Postman](#testing-the-api-with-postman)
@@ -44,7 +44,7 @@ Check the [API reference](https://developer.intuit.com/docs/api/accounting) for 
 * Explore the API using [Postman](https://developer.intuit.com/docs/00_quickbooks_online/2_build/20_explore_the_quickbooks_online_api/20_postman)
 * Use [Sandbox](https://developer.intuit.com/v2/ui#/sandbox) for testing
 
-# Hello QuickBooks - 5 minutes tutorial
+# Hello QuickBooks (5 minutes tutorial)
 
 ## Creating your QuickBooks app
 
