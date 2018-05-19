@@ -5,7 +5,7 @@
 * [APIs at your disposal](#apis-at-your-disposal)
 * [Intro to the QuickBooks APIs](#intro-to-the-quickbooks-apis)
 * [Useful developer tools](#useful-developer-tools)
-* [Hello QuickBooks (5 minutes tutorial)](#helloquickbooks-5-minutes-tutorial)
+* [Hello QuickBooks (5 minutes tutorial)](#hello-quickbooks-5-minutes-tutorial)
     * [Creating your QuickBooks app](#creating-your-quickbooks-app)
     * [Setting up OAuth 2.0 access](#setting-up-oauth-20-access)
     * [Testing the API with Postman](#testing-the-api-with-postman)
