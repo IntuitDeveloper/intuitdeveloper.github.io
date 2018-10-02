@@ -460,6 +460,19 @@ label.search span
   }
 }
 
+@media (min-width: 1200px) {
+  .col-lg-4
+  
+  #updated .col-lg-4
+  {
+    width: 24.25%;
+  }
+  .col-lg-2
+  {
+    width: 25%
+  }
+}
+
 @media (min-width: 768px) {
   .nav-justified {
     max-height: 52px;
