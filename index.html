@@ -201,11 +201,11 @@
             
             if (name.toUpperCase().indexOf("CRUD") >= 0) {
               $item.appendTo( "#crud" );
+            } else if (name.toUpperCase().indexOf("OAUTH2") >= 0 ) {            
+              $item.appendTo( "#oauth2" );
             } else if (name.toUpperCase().indexOf("OAUTH") >= 0 && name.toUpperCase().indexOf("OAUTH2") != 0) {              
               $item.appendTo( "#oauth" );
-            } else if (name.toUpperCase().indexOf("OAUTH2") >= 0) {            
-              $item.appendTo( "#oauth2" );
-            } else if (name.toUpperCase().indexOf("WEBHOOK") >= 0) {            
+            }  else if (name.toUpperCase().indexOf("WEBHOOK") >= 0) {            
               $item.appendTo( "#webhooks" );
             } else if (name.toUpperCase().indexOf("INVOIC") >= 0) {         
               $item.appendTo( "#invoice" );
