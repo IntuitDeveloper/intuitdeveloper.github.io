@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>SalesLine</title>
+    <title>ProductEntitlement</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -370,7 +370,7 @@
                 PayslipDeduction
             </a>
         </li>
-        <li  title="ProductEntitlement">
+        <li class="slds-is-active" title="ProductEntitlement">
             <a href="productentitlement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ProductEntitlement
             </a>
@@ -410,7 +410,7 @@
                 Role
             </a>
         </li>
-        <li class="slds-is-active" title="SalesLine">
+        <li  title="SalesLine">
             <a href="salesline.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 SalesLine
             </a>
@@ -686,8 +686,8 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">SalesLine</h1>
-        <div class="slds-text-body--regular"><p>Details of sales line.</p>
+        <h1 class="slds-text-heading--large">ProductEntitlement</h1>
+        <div class="slds-text-body--regular"><p>Provides details about product entitlements.</p>
 </div>
     </div>
 </section>
@@ -699,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">SalesLine</span> {</li><li></li><li><span class="tab"><span class="comment line">#   List of item lines.</span></span></li><li><span class="tab"><span class="meta">itemLines</span>: [<a class="support type" href="itemsalesline.doc.html">ItemSalesLine</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   List of description lines.</span></span></li><li><span class="tab"><span class="meta">descriptionLines</span>: [<a class="support type" href="descriptiononlyline.doc.html">DescriptionOnlyLine</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   List of discount lines.</span></span></li><li><span class="tab"><span class="meta">discountLines</span>: [<a class="support type" href="discountsalesline.doc.html">DiscountSalesLine</a>] </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ProductEntitlement</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Company or account identifier</span></span></li><li><span class="tab"><span class="meta">realmId</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Account plan</span></span></li><li><span class="tab"><span class="meta">plan</span>: <a class="support type" href="productplan.doc.html">ProductPlan</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   State of the service</span></span></li><li><span class="tab"><span class="meta">serviceStatus</span>: <a class="support type" href="productservicestatus.doc.html">ProductServiceStatus</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   State of current entitlement</span></span></li><li><span class="tab"><span class="meta">status</span>: <a class="support type" href="productentitlementstatus.doc.html">ProductEntitlementStatus</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The date until which this particular product is entitled.</span></span></li><li><span class="tab"><span class="meta">endDate</span>: <a class="support type" href="date.doc.html">Date</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The identifier of wholesale company</span></span></li><li><span class="tab"><span class="meta">firmRealmID</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   If true, it indicates that accountant runs this entitlement for their QBOA </span></span></li><li><span class="tab"><span class="comment line">#   company</span></span></li><li><span class="tab"><span class="meta">isAccountantFirm</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -710,7 +710,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reviewinvoicedetails.doc.html" title="ReviewInvoiceDetails - Details of review invoice.">ReviewInvoiceDetails<em>Details of review invoice.</em></a><li></ul>
+        <ul class="require-by"><li><a href="billingdetails.doc.html" title="BillingDetails - Root type for billing details like entitlements, subscription, addons">BillingDetails<em>Root type for billing details like entitlements, subscription, addons</em></a><li></ul>
     </div>
 </section>
 <footer>

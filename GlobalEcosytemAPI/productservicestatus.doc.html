@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ExternalIdInput</title>
+    <title>ProductServiceStatus</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -75,6 +75,11 @@
                 Int
             </a>
         </li>
+        <li  title="ProductPlan">
+            <a href="productplan.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductPlan
+            </a>
+        </li>
         <li  title="String">
             <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 String
@@ -100,9 +105,19 @@
                 PayrollTimeInterval
             </a>
         </li>
-        <li  title="ReviewStatusEnum">
-            <a href="reviewstatusenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ReviewStatusEnum
+        <li  title="ProductEntitlementStatus">
+            <a href="productentitlementstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlementStatus
+            </a>
+        </li>
+        <li class="slds-is-active" title="ProductServiceStatus">
+            <a href="productservicestatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductServiceStatus
+            </a>
+        </li>
+        <li  title="ReviewStatus">
+            <a href="reviewstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReviewStatus
             </a>
         </li>
         <li  title="RoleStatus">
@@ -115,9 +130,9 @@
                 RoleType
             </a>
         </li>
-        <li  title="TransactionTypeEnum">
-            <a href="transactiontypeenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TransactionTypeEnum
+        <li  title="TransactionType">
+            <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionType
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -163,6 +178,11 @@
         <li  title="AssociatedType">
             <a href="associatedtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedType
+            </a>
+        </li>
+        <li  title="BillingDetails">
+            <a href="billingdetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BillingDetails
             </a>
         </li>
         <li  title="BillingUsageResult">
@@ -300,9 +320,9 @@
                 EmploymentDetail
             </a>
         </li>
-        <li  title="ExternalId">
-            <a href="externalid.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalId
+        <li  title="ExternalMetadata">
+            <a href="externalmetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadata
             </a>
         </li>
         <li  title="FreeFormAddress">
@@ -348,6 +368,11 @@
         <li  title="PayslipDeduction">
             <a href="payslipdeduction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PayslipDeduction
+            </a>
+        </li>
+        <li  title="ProductEntitlement">
+            <a href="productentitlement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlement
             </a>
         </li>
         <li  title="Rate">
@@ -540,9 +565,9 @@
                 EmploymentStatusExpression
             </a>
         </li>
-        <li class="slds-is-active" title="ExternalIdInput">
-            <a href="externalidinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalIdInput
+        <li  title="ExternalMetadataInput">
+            <a href="externalmetadatainput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadataInput
             </a>
         </li>
         <li  title="FreeFormAddressInput">
@@ -600,6 +625,11 @@
                 StringExpression
             </a>
         </li>
+        <li  title="TaxCodeInput">
+            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxCodeInput
+            </a>
+        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -655,9 +685,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
-        <h1 class="slds-text-heading--large">ExternalIdInput</h1>
-        <div class="slds-text-body--regular"><p>Input for providing external id details.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">ProductServiceStatus</h1>
+        <div class="slds-text-body--regular"><p>State of service or product</p>
 </div>
     </div>
 </section>
@@ -669,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">ExternalIdInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Name of externalId.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Value of externalId.</span></span></li><li><span class="tab"><span class="meta">value</span>: <a class="support type" href="string.doc.html">String</a></span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ProductServiceStatus</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRIAL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRIAL_OPTED_IN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PAID</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PENDING_CANCEL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CANCELED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IN_COLLECTION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IN_PROGRESS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">READ_ONLY</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">UNKNOWN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NOT_SUBSCRIBED</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -680,7 +710,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="invoicetransactioninput.doc.html" title="InvoiceTransactionInput - Input for creating review invoice transaction.">InvoiceTransactionInput<em>Input for creating review invoice transaction.</em></a><li></ul>
+        <ul class="require-by"><li><a href="productentitlement.doc.html" title="ProductEntitlement - Provides details about product entitlements.">ProductEntitlement<em>Provides details about product entitlements.</em></a><li></ul>
     </div>
 </section>
 <footer>

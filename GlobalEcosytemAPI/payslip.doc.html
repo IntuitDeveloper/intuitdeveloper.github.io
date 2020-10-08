@@ -75,6 +75,11 @@
                 Int
             </a>
         </li>
+        <li  title="ProductPlan">
+            <a href="productplan.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductPlan
+            </a>
+        </li>
         <li  title="String">
             <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 String
@@ -100,9 +105,19 @@
                 PayrollTimeInterval
             </a>
         </li>
-        <li  title="ReviewStatusEnum">
-            <a href="reviewstatusenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ReviewStatusEnum
+        <li  title="ProductEntitlementStatus">
+            <a href="productentitlementstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlementStatus
+            </a>
+        </li>
+        <li  title="ProductServiceStatus">
+            <a href="productservicestatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductServiceStatus
+            </a>
+        </li>
+        <li  title="ReviewStatus">
+            <a href="reviewstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReviewStatus
             </a>
         </li>
         <li  title="RoleStatus">
@@ -115,9 +130,9 @@
                 RoleType
             </a>
         </li>
-        <li  title="TransactionTypeEnum">
-            <a href="transactiontypeenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TransactionTypeEnum
+        <li  title="TransactionType">
+            <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionType
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -163,6 +178,11 @@
         <li  title="AssociatedType">
             <a href="associatedtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedType
+            </a>
+        </li>
+        <li  title="BillingDetails">
+            <a href="billingdetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BillingDetails
             </a>
         </li>
         <li  title="BillingUsageResult">
@@ -300,9 +320,9 @@
                 EmploymentDetail
             </a>
         </li>
-        <li  title="ExternalId">
-            <a href="externalid.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalId
+        <li  title="ExternalMetadata">
+            <a href="externalmetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadata
             </a>
         </li>
         <li  title="FreeFormAddress">
@@ -348,6 +368,11 @@
         <li  title="PayslipDeduction">
             <a href="payslipdeduction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PayslipDeduction
+            </a>
+        </li>
+        <li  title="ProductEntitlement">
+            <a href="productentitlement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlement
             </a>
         </li>
         <li  title="Rate">
@@ -540,9 +565,9 @@
                 EmploymentStatusExpression
             </a>
         </li>
-        <li  title="ExternalIdInput">
-            <a href="externalidinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalIdInput
+        <li  title="ExternalMetadataInput">
+            <a href="externalmetadatainput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadataInput
             </a>
         </li>
         <li  title="FreeFormAddressInput">
@@ -598,6 +623,11 @@
         <li  title="StringExpression">
             <a href="stringexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 StringExpression
+            </a>
+        </li>
+        <li  title="TaxCodeInput">
+            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxCodeInput
             </a>
         </li>
         <li  title="UpdateEmployeeDeductionInput">
@@ -669,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Payslip</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="comment line">#   Payslip ID</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Payslip date</span></span></li><li><span class="tab"><span class="meta">payDate</span>: <a class="support type" href="date.doc.html">Date</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The date when the payslip was confirmed by the employer</span></span></li><li><span class="tab"><span class="meta">payrollProcessDate</span>: <a class="support type" href="datetime.doc.html">DateTime</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Gross pay for current pay period. It contains current amount and year to date </span></span></li><li><span class="tab"><span class="comment line">#   amount</span></span></li><li><span class="tab"><span class="meta">grossPay</span>: <a class="support type" href="accumulatingamount.doc.html">AccumulatingAmount</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Contribution details for current pay period</span></span></li><li><span class="tab"><span class="meta">contributions</span>: [<a class="support type" href="payslipcontribution.doc.html">PayslipContribution</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Deduction details for current pay period</span></span></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="payslipdeduction.doc.html">PayslipDeduction</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Compensation details for current pay period</span></span></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="payslipcompensation.doc.html">PayslipCompensation</a>!]! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Payslip</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="comment line">#   Payslip ID</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Payslip date</span></span></li><li><span class="tab"><span class="meta">payDate</span>: <a class="support type" href="date.doc.html">Date</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The date when the payslip was confirmed by the employer</span></span></li><li><span class="tab"><span class="meta">payrollProcessDateTime</span>: <a class="support type" href="datetime.doc.html">DateTime</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Gross pay for current pay period. It contains current amount and year to date </span></span></li><li><span class="tab"><span class="comment line">#   amount</span></span></li><li><span class="tab"><span class="meta">grossPay</span>: <a class="support type" href="accumulatingamount.doc.html">AccumulatingAmount</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Contribution details for current pay period</span></span></li><li><span class="tab"><span class="meta">contributions</span>: [<a class="support type" href="payslipcontribution.doc.html">PayslipContribution</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Deduction details for current pay period</span></span></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="payslipdeduction.doc.html">PayslipDeduction</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Compensation details for current pay period</span></span></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="payslipcompensation.doc.html">PayslipCompensation</a>!]! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

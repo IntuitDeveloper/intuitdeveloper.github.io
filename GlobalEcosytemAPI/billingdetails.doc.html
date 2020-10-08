@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ReviewStatusEnum</title>
+    <title>BillingDetails</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -75,6 +75,11 @@
                 Int
             </a>
         </li>
+        <li  title="ProductPlan">
+            <a href="productplan.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductPlan
+            </a>
+        </li>
         <li  title="String">
             <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 String
@@ -100,9 +105,19 @@
                 PayrollTimeInterval
             </a>
         </li>
-        <li class="slds-is-active" title="ReviewStatusEnum">
-            <a href="reviewstatusenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ReviewStatusEnum
+        <li  title="ProductEntitlementStatus">
+            <a href="productentitlementstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlementStatus
+            </a>
+        </li>
+        <li  title="ProductServiceStatus">
+            <a href="productservicestatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductServiceStatus
+            </a>
+        </li>
+        <li  title="ReviewStatus">
+            <a href="reviewstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReviewStatus
             </a>
         </li>
         <li  title="RoleStatus">
@@ -115,9 +130,9 @@
                 RoleType
             </a>
         </li>
-        <li  title="TransactionTypeEnum">
-            <a href="transactiontypeenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TransactionTypeEnum
+        <li  title="TransactionType">
+            <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionType
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -163,6 +178,11 @@
         <li  title="AssociatedType">
             <a href="associatedtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedType
+            </a>
+        </li>
+        <li class="slds-is-active" title="BillingDetails">
+            <a href="billingdetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BillingDetails
             </a>
         </li>
         <li  title="BillingUsageResult">
@@ -300,9 +320,9 @@
                 EmploymentDetail
             </a>
         </li>
-        <li  title="ExternalId">
-            <a href="externalid.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalId
+        <li  title="ExternalMetadata">
+            <a href="externalmetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadata
             </a>
         </li>
         <li  title="FreeFormAddress">
@@ -348,6 +368,11 @@
         <li  title="PayslipDeduction">
             <a href="payslipdeduction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PayslipDeduction
+            </a>
+        </li>
+        <li  title="ProductEntitlement">
+            <a href="productentitlement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlement
             </a>
         </li>
         <li  title="Rate">
@@ -540,9 +565,9 @@
                 EmploymentStatusExpression
             </a>
         </li>
-        <li  title="ExternalIdInput">
-            <a href="externalidinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalIdInput
+        <li  title="ExternalMetadataInput">
+            <a href="externalmetadatainput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadataInput
             </a>
         </li>
         <li  title="FreeFormAddressInput">
@@ -600,6 +625,11 @@
                 StringExpression
             </a>
         </li>
+        <li  title="TaxCodeInput">
+            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxCodeInput
+            </a>
+        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -655,9 +685,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
-        <h1 class="slds-text-heading--large">ReviewStatusEnum</h1>
-        <div class="slds-text-body--regular"><p>Different review status.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">BillingDetails</h1>
+        <div class="slds-text-body--regular"><p>Root type for billing details like entitlements, subscription, addons</p>
 </div>
     </div>
 </section>
@@ -669,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReviewStatusEnum</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IN_PROGRESS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PROCESSED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DUPLICATE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DELETED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EXCLUDED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ACCEPTED_MATCHED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ACCEPTED_ADDED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TO_BE_REVIEWED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NOT_PROCESSED</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">BillingDetails</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Provides product entitlements</span></span></li><li><span class="tab"><span class="meta">entitlements</span>: [<a class="support type" href="productentitlement.doc.html">ProductEntitlement</a>!]! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -680,7 +710,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reviewinvoicetransaction.doc.html" title="ReviewInvoiceTransaction - Details of review invoice transaction.">ReviewInvoiceTransaction<em>Details of review invoice transaction.</em></a><li><li><a href="reviewtransaction.doc.html" title="ReviewTransaction - Details of review transaction.">ReviewTransaction<em>Details of review transaction.</em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>

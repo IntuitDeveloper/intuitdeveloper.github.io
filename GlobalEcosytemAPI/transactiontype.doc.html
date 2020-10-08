@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>SalesLine</title>
+    <title>TransactionType</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -130,7 +130,7 @@
                 RoleType
             </a>
         </li>
-        <li  title="TransactionType">
+        <li class="slds-is-active" title="TransactionType">
             <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 TransactionType
             </a>
@@ -410,7 +410,7 @@
                 Role
             </a>
         </li>
-        <li class="slds-is-active" title="SalesLine">
+        <li  title="SalesLine">
             <a href="salesline.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 SalesLine
             </a>
@@ -685,9 +685,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">SalesLine</h1>
-        <div class="slds-text-body--regular"><p>Details of sales line.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">TransactionType</h1>
+        <div class="slds-text-body--regular"><p>Types of transaction.</p>
 </div>
     </div>
 </section>
@@ -699,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">SalesLine</span> {</li><li></li><li><span class="tab"><span class="comment line">#   List of item lines.</span></span></li><li><span class="tab"><span class="meta">itemLines</span>: [<a class="support type" href="itemsalesline.doc.html">ItemSalesLine</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   List of description lines.</span></span></li><li><span class="tab"><span class="meta">descriptionLines</span>: [<a class="support type" href="descriptiononlyline.doc.html">DescriptionOnlyLine</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   List of discount lines.</span></span></li><li><span class="tab"><span class="meta">discountLines</span>: [<a class="support type" href="discountsalesline.doc.html">DiscountSalesLine</a>] </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">enum</span> <span class="identifier">TransactionType</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SALE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SALE_INVOICE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SALE_ESTIMATE</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -710,7 +710,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reviewinvoicedetails.doc.html" title="ReviewInvoiceDetails - Details of review invoice.">ReviewInvoiceDetails<em>Details of review invoice.</em></a><li></ul>
+        <ul class="require-by"><li><a href="resolvedtransaction.doc.html" title="ResolvedTransaction - Details of resolved transaction.">ResolvedTransaction<em>Details of resolved transaction.</em></a><li></ul>
     </div>
 </section>
 <footer>

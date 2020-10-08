@@ -75,6 +75,11 @@
                 Int
             </a>
         </li>
+        <li  title="ProductPlan">
+            <a href="productplan.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductPlan
+            </a>
+        </li>
         <li  title="String">
             <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 String
@@ -100,9 +105,19 @@
                 PayrollTimeInterval
             </a>
         </li>
-        <li  title="ReviewStatusEnum">
-            <a href="reviewstatusenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ReviewStatusEnum
+        <li  title="ProductEntitlementStatus">
+            <a href="productentitlementstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlementStatus
+            </a>
+        </li>
+        <li  title="ProductServiceStatus">
+            <a href="productservicestatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductServiceStatus
+            </a>
+        </li>
+        <li  title="ReviewStatus">
+            <a href="reviewstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReviewStatus
             </a>
         </li>
         <li  title="RoleStatus">
@@ -115,9 +130,9 @@
                 RoleType
             </a>
         </li>
-        <li  title="TransactionTypeEnum">
-            <a href="transactiontypeenum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TransactionTypeEnum
+        <li  title="TransactionType">
+            <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionType
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -163,6 +178,11 @@
         <li  title="AssociatedType">
             <a href="associatedtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedType
+            </a>
+        </li>
+        <li  title="BillingDetails">
+            <a href="billingdetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BillingDetails
             </a>
         </li>
         <li  title="BillingUsageResult">
@@ -300,9 +320,9 @@
                 EmploymentDetail
             </a>
         </li>
-        <li  title="ExternalId">
-            <a href="externalid.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalId
+        <li  title="ExternalMetadata">
+            <a href="externalmetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadata
             </a>
         </li>
         <li  title="FreeFormAddress">
@@ -348,6 +368,11 @@
         <li  title="PayslipDeduction">
             <a href="payslipdeduction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PayslipDeduction
+            </a>
+        </li>
+        <li  title="ProductEntitlement">
+            <a href="productentitlement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductEntitlement
             </a>
         </li>
         <li  title="Rate">
@@ -540,9 +565,9 @@
                 EmploymentStatusExpression
             </a>
         </li>
-        <li  title="ExternalIdInput">
-            <a href="externalidinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ExternalIdInput
+        <li  title="ExternalMetadataInput">
+            <a href="externalmetadatainput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExternalMetadataInput
             </a>
         </li>
         <li  title="FreeFormAddressInput">
@@ -598,6 +623,11 @@
         <li  title="StringExpression">
             <a href="stringexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 StringExpression
+            </a>
+        </li>
+        <li  title="TaxCodeInput">
+            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxCodeInput
             </a>
         </li>
         <li  title="UpdateEmployeeDeductionInput">
@@ -669,7 +699,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ReviewInvoiceDetails</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Date of transaction.</span></span></li><li><span class="tab"><span class="meta">transactionDate</span>: <a class="support type" href="date.doc.html">Date</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Contact details of the customer.</span></span></li><li><span class="tab"><span class="meta">customer</span>: <a class="support type" href="contact.doc.html">Contact</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Currency details.</span></span></li><li><span class="tab"><span class="meta">currency</span>: <a class="support type" href="currencyinfo.doc.html">CurrencyInfo</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Private memo text.</span></span></li><li><span class="tab"><span class="meta">privateMemo</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Customer memo text.</span></span></li><li><span class="tab"><span class="meta">customerMemo</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Invoice sales lines.</span></span></li><li><span class="tab"><span class="meta">lines</span>: <a class="support type" href="salesline.doc.html">SalesLine</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Due date for the invoice.</span></span></li><li><span class="tab"><span class="meta">dueDate</span>: <a class="support type" href="date.doc.html">Date</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Sales terms.</span></span></li><li><span class="tab"><span class="meta">term</span>: <a class="support type" href="salesterm.doc.html">SalesTerm</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Email delivery list.</span></span></li><li><span class="tab"><span class="meta">emailDeliveryInfo</span>: <a class="support type" href="emaildeliveryinfo.doc.html">EmailDeliveryInfo</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Invoice reference number.</span></span></li><li><span class="tab"><span class="meta">referenceNumber</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Shipping details.</span></span></li><li><span class="tab"><span class="meta">shipping</span>: <a class="support type" href="shippingdetails.doc.html">ShippingDetails</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Department details.</span></span></li><li><span class="tab"><span class="meta">department</span>: <a class="support type" href="department.doc.html">Department</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Class details.</span></span></li><li><span class="tab"><span class="meta">class</span>: <a class="support type" href="class.doc.html">Class</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ReviewInvoiceDetails</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Date of transaction.</span></span></li><li><span class="tab"><span class="meta">transactionDate</span>: <a class="support type" href="date.doc.html">Date</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Transaction amount.</span></span></li><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="amount.doc.html">Amount</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Contact details of the customer.</span></span></li><li><span class="tab"><span class="meta">customer</span>: <a class="support type" href="contact.doc.html">Contact</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Currency details.</span></span></li><li><span class="tab"><span class="meta">currency</span>: <a class="support type" href="currencyinfo.doc.html">CurrencyInfo</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Private memo text.</span></span></li><li><span class="tab"><span class="meta">privateMemo</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Customer memo text.</span></span></li><li><span class="tab"><span class="meta">customerMemo</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Invoice sales lines.</span></span></li><li><span class="tab"><span class="meta">lines</span>: <a class="support type" href="salesline.doc.html">SalesLine</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Due date for the invoice.</span></span></li><li><span class="tab"><span class="meta">dueDate</span>: <a class="support type" href="date.doc.html">Date</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Sales terms.</span></span></li><li><span class="tab"><span class="meta">term</span>: <a class="support type" href="salesterm.doc.html">SalesTerm</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Email delivery list.</span></span></li><li><span class="tab"><span class="meta">emailDeliveryInfo</span>: <a class="support type" href="emaildeliveryinfo.doc.html">EmailDeliveryInfo</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Invoice reference number.</span></span></li><li><span class="tab"><span class="meta">referenceNumber</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Shipping details.</span></span></li><li><span class="tab"><span class="meta">shipping</span>: <a class="support type" href="shippingdetails.doc.html">ShippingDetails</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Department details.</span></span></li><li><span class="tab"><span class="meta">department</span>: <a class="support type" href="department.doc.html">Department</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Class details.</span></span></li><li><span class="tab"><span class="meta">class</span>: <a class="support type" href="class.doc.html">Class</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
