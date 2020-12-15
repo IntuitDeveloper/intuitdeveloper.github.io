@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
         <h1 class="slds-text-heading--large">CreateEmployeeDeductionInput</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Input to create new employee deduction.</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CreateEmployeeDeductionInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="meta">employeeId</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="rateinput.doc.html">RateInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">annualMaximumAmount</span>: <a class="support type" href="amount.doc.html">Amount</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">employerDeductionId</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">input</span> <span class="identifier">CreateEmployeeDeductionInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Employee associated with this employee deduction.</span></span></li><li><span class="tab"><span class="meta">employeeId</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Indicates whether deduction will be applied or not for employee.</span></span></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The default amount deducted from the employees of the employer</span></span></li><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="rateinput.doc.html">RateInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The maximum amount to withhold for this deduction in a tax year</span></span></li><li><span class="tab"><span class="meta">annualMaximumAmount</span>: <a class="support type" href="amount.doc.html">Amount</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Employer deduction associated with this employee deduction</span></span></li><li><span class="tab"><span class="meta">employerDeductionId</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

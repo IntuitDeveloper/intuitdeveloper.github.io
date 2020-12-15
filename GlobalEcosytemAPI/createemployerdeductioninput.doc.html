@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
         <h1 class="slds-text-heading--large">CreateEmployerDeductionInput</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Input to create new employer deduction.</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CreateEmployerDeductionInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">statutoryDeductionPolicy</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CreateEmployerDeductionInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The name of this deduction.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The statutory policy of this deduction. It may enforce restrictions on the </span></span></li><li><span class="tab"><span class="comment line">#   employer policy like annualMaximumAmount etc.</span></span></li><li><span class="tab"><span class="meta">statutoryDeductionPolicy</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

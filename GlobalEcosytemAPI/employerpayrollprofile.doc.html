@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -700,7 +705,7 @@ benefits like deduction, contribution, pensions etc. Payroll doesn&#39;t have it
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployerPayrollProfile</span> {</li><li></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="employercompensation.doc.html">EmployerCompensation</a>!]! </span></li><li></li><li><span class="tab"><span class="meta">pensions</span>: [<a class="support type" href="employerpension.doc.html">EmployerPension</a>!]! </span></li><li></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="employerdeduction.doc.html">EmployerDeduction</a>!]! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployerPayrollProfile</span> {</li><li></li><li><span class="tab"><span class="comment line">#   List of employer compensations.</span></span></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="employercompensation.doc.html">EmployerCompensation</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   List of employer pensions.</span></span></li><li><span class="tab"><span class="meta">pensions</span>: [<a class="support type" href="employerpension.doc.html">EmployerPension</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   List of employer deductions.</span></span></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="employerdeduction.doc.html">EmployerDeduction</a>!]! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

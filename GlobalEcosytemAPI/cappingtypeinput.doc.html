@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li class="slds-is-active" title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
         <h1 class="slds-text-heading--large">CappingTypeInput</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Common capping input type</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CappingTypeInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="amount.doc.html">Amount</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">timeInterval</span>: <a class="support type" href="payrolltimeinterval.doc.html">PayrollTimeInterval</a>!</span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CappingTypeInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   A fixed amount to be used as the limit for the contributions in the frequency </span></span></li><li><span class="tab"><span class="comment line">#   specified</span></span></li><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="amount.doc.html">Amount</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The amount of time for which this capping applies</span></span></li><li><span class="tab"><span class="meta">timeInterval</span>: <a class="support type" href="payrolltimeinterval.doc.html">PayrollTimeInterval</a></span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -709,7 +715,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="contributionsetupinput.doc.html" title="ContributionSetupInput - ">ContributionSetupInput<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="contributionsetupinput.doc.html" title="ContributionSetupInput - Contribution setup input. It includes amount and capping for contribution.">ContributionSetupInput<em>Contribution setup input. It includes amount and capping for contribution.</em></a><li></ul>
     </div>
 </section>
 <footer>

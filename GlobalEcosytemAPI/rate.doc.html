@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,10 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">Rate</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Common rate
+15% will be expressed as percentage: true and value: 15
+100 will be expressed as percentage: false and value: 100</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +706,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">Rate</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Boolean flag to represent the number in value field. True means number inf value </span></span></li><li><span class="tab"><span class="comment line">#   field is the percentage number</span></span></li><li><span class="tab"><span class="meta">percentage</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">value</span>: <a class="support type" href="amount.doc.html">Amount</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">Rate</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Boolean flag to represent the percentage or number in value field.</span></span></li><li><span class="tab"><span class="meta">percentage</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Rate Value. It can express percent or non-percent quantity</span></span></li><li><span class="tab"><span class="meta">value</span>: <a class="support type" href="amount.doc.html">Amount</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -709,7 +717,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="contributionsetup.doc.html" title="ContributionSetup - ">ContributionSetup<em>null</em></a><li><li><a href="discountsalesline.doc.html" title="DiscountSalesLine - Details of discount line.">DiscountSalesLine<em>Details of discount line.</em></a><li><li><a href="employeededuction.doc.html" title="EmployeeDeduction - ">EmployeeDeduction<em>null</em></a><li><li><a href="itemsalesline.doc.html" title="ItemSalesLine - Details of item line.">ItemSalesLine<em>Details of item line.</em></a><li></ul>
+        <ul class="require-by"><li><a href="contributionsetup.doc.html" title="ContributionSetup - Contribution setup. It includes amount and capping for contribution.">ContributionSetup<em>Contribution setup. It includes amount and capping for contribution.</em></a><li><li><a href="discountsalesline.doc.html" title="DiscountSalesLine - Details of discount line.">DiscountSalesLine<em>Details of discount line.</em></a><li><li><a href="employeededuction.doc.html" title="EmployeeDeduction - Employee deduction is an amount paid by an employee and deducted from each paycheck.">EmployeeDeduction<em>Employee deduction is an amount paid by an employee and deducted from each paycheck.</em></a><li><li><a href="itemsalesline.doc.html" title="ItemSalesLine - Details of item line.">ItemSalesLine<em>Details of item line.</em></a><li><li><a href="reviewinvoicedetails.doc.html" title="ReviewInvoiceDetails - Details of review invoice.">ReviewInvoiceDetails<em>Details of review invoice.</em></a><li></ul>
     </div>
 </section>
 <footer>

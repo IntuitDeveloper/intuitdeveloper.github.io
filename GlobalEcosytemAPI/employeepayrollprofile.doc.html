@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">EmployeePayrollProfile</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Employee payroll persona</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployeePayrollProfile</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Address used for payroll forms</span></span></li><li><span class="tab"><span class="meta">preferredAddress</span>: <a class="support type" href="address.doc.html">Address</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Phone number used for contact about payroll</span></span></li><li><span class="tab"><span class="meta">preferredPhone</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Email used for contact about payroll</span></span></li><li><span class="tab"><span class="meta">preferredEmail</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll compensation related information</span></span></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="employeecompensation.doc.html">EmployeeCompensation</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll deduction related information</span></span></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="employeededuction.doc.html">EmployeeDeduction</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll pension/retirement plan related information</span></span></li><li><span class="tab"><span class="meta">pensions</span>: [<a class="support type" href="employeepension.doc.html">EmployeePension</a>!]! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployeePayrollProfile</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Employee address to be used for any communications related payroll for this </span></span></li><li><span class="tab"><span class="comment line">#   given employee.</span></span></li><li><span class="tab"><span class="comment line">#   This is personal home address, which employee have designated as preferred </span></span></li><li><span class="tab"><span class="comment line">#   adress for payroll.</span></span></li><li><span class="tab"><span class="meta">preferredAddress</span>: <a class="support type" href="address.doc.html">Address</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee phone number to be used for any communications related payroll for this </span></span></li><li><span class="tab"><span class="comment line">#   given employee.</span></span></li><li><span class="tab"><span class="meta">preferredPhone</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee email used number to be used for any communications related payroll for </span></span></li><li><span class="tab"><span class="comment line">#   this given employee.</span></span></li><li><span class="tab"><span class="meta">preferredEmail</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll compensation related information</span></span></li><li><span class="tab"><span class="meta">compensations</span>: [<a class="support type" href="employeecompensation.doc.html">EmployeeCompensation</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll deduction related information</span></span></li><li><span class="tab"><span class="meta">deductions</span>: [<a class="support type" href="employeededuction.doc.html">EmployeeDeduction</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee payroll pension/retirement plan related information</span></span></li><li><span class="tab"><span class="meta">pensions</span>: [<a class="support type" href="employeepension.doc.html">EmployeePension</a>!]! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

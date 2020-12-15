@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -698,7 +703,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Root query to get the company information</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">company</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>): <a class="support type" href="company.doc.html">Company</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">node</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="node.doc.html">Node</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"No longer supported" </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#   Get the user information <FIll in proper documentation></span></span></li><li><span class="tab"><span class="meta">user</span>: <a class="support type" href="user.doc.html">User</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Provide custom fields configured for current company</span></span></li><li><span class="tab"><span class="meta">customFields</span>: [<a class="support type" href="customfield.doc.html">CustomField</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Get review invoice details.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">reviewInvoice</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>): <a class="support type" href="reviewinvoicetransaction.doc.html">ReviewInvoiceTransaction</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Query billing information for a given account(s)</span></span></li><li><span class="tab"><span class="meta">billing</span>: <a class="support type" href="billingdetails.doc.html">BillingDetails</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Root query to get the company information</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">company</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>): <a class="support type" href="company.doc.html">Company</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">node</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="node.doc.html">Node</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"No longer supported" </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#   Get the user information <FIll in proper documentation></span></span></li><li><span class="tab"><span class="meta">user</span>: <a class="support type" href="user.doc.html">User</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Provide custom fields configured for current company</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>filter</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">customFields</span>(<span class="meta">filter</span>: <a class="support type" href="customfieldfilter.doc.html">CustomFieldFilter</a>): [<a class="support type" href="customfield.doc.html">CustomField</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   Get review invoice details.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">reviewInvoice</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>): <a class="support type" href="reviewinvoicetransaction.doc.html">ReviewInvoiceTransaction</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Query billing information for a given account(s)</span></span></li><li><span class="tab"><span class="meta">billing</span>: <a class="support type" href="billingdetails.doc.html">BillingDetails</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

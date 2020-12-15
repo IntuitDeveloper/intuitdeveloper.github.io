@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>UpdateEmployeeDeductionInput</title>
+    <title>CustomFieldFilter</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -535,7 +535,7 @@
                 CurrencyInfoInput
             </a>
         </li>
-        <li  title="CustomFieldFilter">
+        <li class="slds-is-active" title="CustomFieldFilter">
             <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CustomFieldFilter
             </a>
@@ -635,7 +635,7 @@
                 StringExpression
             </a>
         </li>
-        <li class="slds-is-active" title="UpdateEmployeeDeductionInput">
+        <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
             </a>
@@ -691,9 +691,8 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
-        <h1 class="slds-text-heading--large">UpdateEmployeeDeductionInput</h1>
-        <div class="slds-text-body--regular"><p>Input to update existing employee deduction.</p>
-</div>
+        <h1 class="slds-text-heading--large">CustomFieldFilter</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -704,7 +703,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">input</span> <span class="identifier">UpdateEmployeeDeductionInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Employee Deduction ID</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Employee associated with this employee deduction.</span></span></li><li><span class="tab"><span class="meta">employeeId</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Indicates whether deduction will be applied or not for employee.</span></span></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The default amount deducted from the employees of the employer</span></span></li><li><span class="tab"><span class="meta">amount</span>: <a class="support type" href="rateinput.doc.html">RateInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   The maximum amount to withhold for this deduction in a tax year</span></span></li><li><span class="tab"><span class="meta">annualMaximumAmount</span>: <a class="support type" href="amount.doc.html">Amount</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Employer deduction associated with this employee deduction</span></span></li><li><span class="tab"><span class="meta">employerDeductionId</span>: <a class="support type" href="id.doc.html">ID</a></span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">input</span> <span class="identifier">CustomFieldFilter</span> {</li><li><span class="tab"><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="stringexpression.doc.html">StringExpression</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">title</span>: <a class="support type" href="stringexpression.doc.html">StringExpression</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">inactive</span>: <a class="support type" href="booleanexpression.doc.html">BooleanExpression</a></span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -715,7 +714,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>

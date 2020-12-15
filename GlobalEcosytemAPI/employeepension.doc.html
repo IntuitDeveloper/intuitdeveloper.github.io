@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">EmployeePension</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Employee Pension details</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployeePension</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employer contribution set up for this pension. It includes amount to be </span></span></li><li><span class="tab"><span class="comment line">#   contributed, and cappings</span></span></li><li><span class="tab"><span class="meta">employerSetup</span>: <a class="support type" href="contributionsetup.doc.html">ContributionSetup</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee contribution set up for this pension. It includes amount to be </span></span></li><li><span class="tab"><span class="comment line">#   contributed, and capping</span></span></li><li><span class="tab"><span class="meta">employeeSetup</span>: <a class="support type" href="contributionsetup.doc.html">ContributionSetup</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employer pension associated with this employee pension</span></span></li><li><span class="tab"><span class="meta">employerPension</span>: <a class="support type" href="employerpension.doc.html">EmployerPension</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployeePension</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="comment line">#   Unique identifier</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Indicates whether pension will be applied or not for employee.</span></span></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employer contribution set up for this pension. It includes amount to be </span></span></li><li><span class="tab"><span class="comment line">#   contributed, and cappings</span></span></li><li><span class="tab"><span class="meta">employerSetup</span>: <a class="support type" href="contributionsetup.doc.html">ContributionSetup</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employee contribution set up for this pension. It includes amount to be </span></span></li><li><span class="tab"><span class="comment line">#   contributed, and capping</span></span></li><li><span class="tab"><span class="meta">employeeSetup</span>: <a class="support type" href="contributionsetup.doc.html">ContributionSetup</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Employer pension associated with this employee pension</span></span></li><li><span class="tab"><span class="meta">employerPension</span>: <a class="support type" href="employerpension.doc.html">EmployerPension</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -709,7 +715,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="employeepayrollprofile.doc.html" title="EmployeePayrollProfile - ">EmployeePayrollProfile<em>null</em></a><li><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="employeepayrollprofile.doc.html" title="EmployeePayrollProfile - Employee payroll persona">EmployeePayrollProfile<em>Employee payroll persona</em></a><li><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>

@@ -485,6 +485,11 @@
                 BillingUsageInput
             </a>
         </li>
+        <li  title="BooleanExpression">
+            <a href="booleanexpression.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BooleanExpression
+            </a>
+        </li>
         <li  title="CappingTypeInput">
             <a href="cappingtypeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CappingTypeInput
@@ -528,6 +533,11 @@
         <li  title="CurrencyInfoInput">
             <a href="currencyinfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CurrencyInfoInput
+            </a>
+        </li>
+        <li  title="CustomFieldFilter">
+            <a href="customfieldfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CustomFieldFilter
             </a>
         </li>
         <li  title="DateExpression">
@@ -625,11 +635,6 @@
                 StringExpression
             </a>
         </li>
-        <li  title="TaxCodeInput">
-            <a href="taxcodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                TaxCodeInput
-            </a>
-        </li>
         <li  title="UpdateEmployeeDeductionInput">
             <a href="updateemployeedeductioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 UpdateEmployeeDeductionInput
@@ -687,7 +692,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">EmployerDeduction</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Employer Deduction details.</p>
+</div>
     </div>
 </section>
 <section>
@@ -698,7 +704,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployerDeduction</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The name of this deduction. If null refer to Statutory Type for this value.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The statutory policy of this deduction. It may enforce restrictions on the </span></span></li><li><span class="tab"><span class="comment line">#   employer policy like annualMaximumAmount etc.</span></span></li><li><span class="tab"><span class="meta">statutoryDeductionPolicy</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">EmployerDeduction</span> <span class="keyword operator ts">implements</span> <a class="support type" href="node.doc.html">Node</a> {</li><li></li><li><span class="tab"><span class="comment line">#   Unique identifier</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The name of this deduction. If null refer to Statutory Type for this value.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   The statutory policy of this deduction. It may enforce restrictions on the </span></span></li><li><span class="tab"><span class="comment line">#   employer policy like annualMaximumAmount etc.</span></span></li><li><span class="tab"><span class="meta">statutoryDeductionPolicy</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -709,7 +715,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="employeededuction.doc.html" title="EmployeeDeduction - ">EmployeeDeduction<em>null</em></a><li><li><a href="employerpayrollprofile.doc.html" title="EmployerPayrollProfile - EmployerPayrollProfile collects together all payroll-specific information for your company. It contains information about employer
+        <ul class="require-by"><li><a href="employeededuction.doc.html" title="EmployeeDeduction - Employee deduction is an amount paid by an employee and deducted from each paycheck.">EmployeeDeduction<em>Employee deduction is an amount paid by an employee and deducted from each paycheck.</em></a><li><li><a href="employerpayrollprofile.doc.html" title="EmployerPayrollProfile - EmployerPayrollProfile collects together all payroll-specific information for your company. It contains information about employer
 benefits like deduction, contribution, pensions etc. Payroll doesn't have it own ID and can be access only through company">EmployerPayrollProfile<em>EmployerPayrollProfile collects together all payroll-specific information for your company. It contains information about employer
 benefits like deduction, contribution, pensions etc. Payroll doesn't have it own ID and can be access only through company</em></a><li><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
     </div>
