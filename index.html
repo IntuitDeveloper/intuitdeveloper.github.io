@@ -14,7 +14,6 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
-    <script src="resources/config.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -184,9 +183,6 @@
       "crossDomain": true,
       "url": "https://api.github.com/orgs/intuitdeveloper/repos?type=all&per_page=1000",
       "method": "GET",
-      "headers": {
-        "authorization": "Basic " + config.authorization
-      }
     }
     $.ajax(settings).done(function (response) {
       
